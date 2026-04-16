@@ -82,14 +82,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#top" className="flex items-center gap-3">
-          <LogoMark className="h-10 w-10" />
-          <div>
-            <p className="font-heading text-lg font-bold uppercase tracking-[0.12em] text-white">
-              AnswerFlowAI
-            </p>
-            <p className="text-xs text-slate-300">AI Reception Systems For HVAC Companies</p>
-          </div>
+        <a href="#top" className="flex items-center">
+          <BrandWordmark className="h-12 w-auto sm:h-14" />
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
@@ -341,14 +335,8 @@ function Footer() {
     <footer className="bg-[#08162f] py-10 text-slate-300">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
         <div>
-          <div className="flex items-center gap-3">
-            <LogoMark className="h-10 w-10" />
-            <div>
-              <p className="font-heading text-lg font-bold uppercase tracking-[0.12em] text-white">
-                AnswerFlowAI
-              </p>
-              <p className="text-sm">AI Reception Systems For HVAC Companies</p>
-            </div>
+          <div className="flex items-center">
+            <BrandWordmark className="h-12 w-auto sm:h-14" />
           </div>
           <div className="mt-5 space-y-2 text-sm">
             <p>Phone: (757) 303-8050</p>
@@ -446,25 +434,56 @@ function StatBlock({ value, label }) {
   )
 }
 
+function BrandWordmark({ className = '' }) {
+  return (
+    <div className={`flex items-center gap-3 ${className}`} aria-label="Answer Flow AI">
+      <LogoMark className="h-full w-auto shrink-0" />
+      <div className="leading-none">
+        <div className="flex items-baseline gap-1 font-heading text-[1.65rem] font-bold uppercase tracking-[-0.06em] sm:text-[1.95rem]">
+          <span className="text-white [text-shadow:0_2px_0_rgba(0,0,0,0.35)]">Answer</span>
+          <span className="bg-[linear-gradient(180deg,#b8ff63_0%,#84db28_100%)] bg-clip-text text-transparent [text-shadow:0_0_18px_rgba(157,244,66,0.28)]">
+            Flow
+          </span>
+          <span className="text-white [text-shadow:0_2px_0_rgba(0,0,0,0.35)]">AI</span>
+        </div>
+        <p className="mt-1 text-[0.56rem] font-semibold uppercase tracking-[0.24em] text-slate-300 sm:text-[0.62rem]">
+          AI Reception Systems For HVAC Companies
+        </p>
+      </div>
+    </div>
+  )
+}
+
 function LogoMark({ className = '' }) {
   return (
-    <svg viewBox="0 0 64 64" className={className} fill="none" aria-hidden="true">
+    <svg viewBox="0 0 96 96" className={className} fill="none" aria-hidden="true">
       <defs>
-        <linearGradient id="phoneCircle" x1="6" y1="50" x2="54" y2="10" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#1c5cff" />
+        <linearGradient id="phoneBlue" x1="16" y1="74" x2="77" y2="18" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1d4eff" />
+          <stop offset="0.52" stopColor="#2bb4ff" />
           <stop offset="1" stopColor="#0b214a" />
+        </linearGradient>
+        <linearGradient id="phoneGlow" x1="22" y1="18" x2="78" y2="78" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#9df442" />
+          <stop offset="1" stopColor="#d0ff43" />
         </linearGradient>
       </defs>
       <path
-        d="M31.7 7c9.7 0 18.8 3.8 25.6 10.6l-5.9 6C46.2 18.4 39.2 15.5 31.7 15.5c-7.3 0-14.3 2.9-19.5 8.1l-3.3 3.3 12.7 12.7 15-15 6 6-21 21L3.1 34.2l3-3c6.7-6.8 15.9-10.6 25.6-10.6Z"
-        fill="#9df442"
+        d="M47.4 6c15.1 0 29.2 5.9 39.8 16.5L78 31.6c-8.2-8.1-19-12.6-30.6-12.6S25 23.5 16.8 31.7L10 38.5l19.8 19.8L53.2 35l9.3 9.3-32.7 32.6L1.5 48.7l5.3-5.4C17.6 11.9 31.9 6 47.4 6Z"
+        fill="url(#phoneBlue)"
+        opacity="0.98"
       />
       <path
-        d="M7.1 26.9c2.3-2.3 6-2.3 8.3 0l20 20c2.3 2.3 2.3 6 0 8.3l-4.4 4.4c-2 2-5.2 2.3-7.6.5-7-5.2-13.2-11.2-18.5-17.9-1.8-2.4-1.6-5.6.4-7.6l4.8-4.7Z"
-        fill="url(#phoneCircle)"
+        d="M11.5 39.4c3.5-3.5 9.2-3.5 12.8 0l31 31c3.5 3.5 3.5 9.2 0 12.8l-7.2 7.2c-3.3 3.3-8.6 3.8-12.5.8-10.8-8.2-20.5-17.5-28.8-27.9-3-3.8-2.7-9.2.7-12.5l8-8.1Z"
+        fill="url(#phoneBlue)"
       />
-      <path d="M45.5 12.4a3 3 0 0 1 4.2 0l4.8 4.7a3 3 0 0 1-4.2 4.3l-4.8-4.8a3 3 0 0 1 0-4.2Z" fill="#9df442" />
-      <path d="M49.2 22.8a3 3 0 0 1 4.2 0l3.5 3.4a3 3 0 0 1-4.2 4.3l-3.5-3.5a3 3 0 0 1 0-4.2Z" fill="#9df442" />
+      <path
+        d="M35.6 43.7 49 57l22.4-22.5c2.7-2.7 7.2-2.7 9.9 0 2.8 2.8 2.8 7.2 0 10L54 72c-2.8 2.8-7.3 2.8-10 0L25.7 53.7c-2.8-2.8-2.8-7.2 0-10 2.7-2.7 7.2-2.7 9.9 0Z"
+        fill="url(#phoneGlow)"
+      />
+      <path d="M64.8 8.9a4.2 4.2 0 0 1 5.9 0l8.2 8.2a4.2 4.2 0 1 1-5.9 5.9l-8.2-8.2a4.2 4.2 0 0 1 0-5.9Z" fill="#9df442" />
+      <path d="M73.2 21.7a4.2 4.2 0 0 1 5.9 0l6 6a4.2 4.2 0 0 1-5.9 5.9l-6-6a4.2 4.2 0 0 1 0-5.9Z" fill="#9df442" />
+      <path d="M79.5 35.2a4.2 4.2 0 0 1 5.9 0l4.5 4.6a4.2 4.2 0 1 1-5.9 5.9l-4.5-4.6a4.2 4.2 0 0 1 0-5.9Z" fill="#9df442" />
     </svg>
   )
 }
