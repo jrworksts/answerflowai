@@ -83,7 +83,7 @@ function Header() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center">
-          <BrandWordmark className="h-12 w-auto sm:h-14" />
+          <BrandLogo className="h-12 w-auto sm:h-14" />
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
@@ -336,7 +336,7 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
         <div>
           <div className="flex items-center">
-            <BrandWordmark className="h-12 w-auto sm:h-14" />
+            <BrandLogo className="h-12 w-auto sm:h-14" />
           </div>
           <div className="mt-5 space-y-2 text-sm">
             <p>Phone: (757) 303-8050</p>
@@ -434,57 +434,15 @@ function StatBlock({ value, label }) {
   )
 }
 
-function BrandWordmark({ className = '' }) {
+function BrandLogo({ className = '' }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`} aria-label="Answer Flow AI">
-      <LogoMark className="h-full w-auto shrink-0" />
-      <div className="leading-none">
-        <div className="flex items-baseline gap-1 font-heading text-[1.65rem] font-bold uppercase tracking-[-0.06em] sm:text-[1.95rem]">
-          <span className="text-white [text-shadow:0_2px_0_rgba(0,0,0,0.35)]">Answer</span>
-          <span className="bg-[linear-gradient(180deg,#b8ff63_0%,#84db28_100%)] bg-clip-text text-transparent [text-shadow:0_0_18px_rgba(157,244,66,0.28)]">
-            Flow
-          </span>
-          <span className="text-white [text-shadow:0_2px_0_rgba(0,0,0,0.35)]">AI</span>
-        </div>
-        <p className="mt-1 text-[0.56rem] font-semibold uppercase tracking-[0.24em] text-slate-300 sm:text-[0.62rem]">
-          AI Reception Systems For HVAC Companies
-        </p>
-      </div>
-    </div>
-  )
-}
-
-function LogoMark({ className = '' }) {
-  return (
-    <svg viewBox="0 0 96 96" className={className} fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="phoneBlue" x1="16" y1="74" x2="77" y2="18" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#1d4eff" />
-          <stop offset="0.52" stopColor="#2bb4ff" />
-          <stop offset="1" stopColor="#0b214a" />
-        </linearGradient>
-        <linearGradient id="phoneGlow" x1="22" y1="18" x2="78" y2="78" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#9df442" />
-          <stop offset="1" stopColor="#d0ff43" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M47.4 6c15.1 0 29.2 5.9 39.8 16.5L78 31.6c-8.2-8.1-19-12.6-30.6-12.6S25 23.5 16.8 31.7L10 38.5l19.8 19.8L53.2 35l9.3 9.3-32.7 32.6L1.5 48.7l5.3-5.4C17.6 11.9 31.9 6 47.4 6Z"
-        fill="url(#phoneBlue)"
-        opacity="0.98"
-      />
-      <path
-        d="M11.5 39.4c3.5-3.5 9.2-3.5 12.8 0l31 31c3.5 3.5 3.5 9.2 0 12.8l-7.2 7.2c-3.3 3.3-8.6 3.8-12.5.8-10.8-8.2-20.5-17.5-28.8-27.9-3-3.8-2.7-9.2.7-12.5l8-8.1Z"
-        fill="url(#phoneBlue)"
-      />
-      <path
-        d="M35.6 43.7 49 57l22.4-22.5c2.7-2.7 7.2-2.7 9.9 0 2.8 2.8 2.8 7.2 0 10L54 72c-2.8 2.8-7.3 2.8-10 0L25.7 53.7c-2.8-2.8-2.8-7.2 0-10 2.7-2.7 7.2-2.7 9.9 0Z"
-        fill="url(#phoneGlow)"
-      />
-      <path d="M64.8 8.9a4.2 4.2 0 0 1 5.9 0l8.2 8.2a4.2 4.2 0 1 1-5.9 5.9l-8.2-8.2a4.2 4.2 0 0 1 0-5.9Z" fill="#9df442" />
-      <path d="M73.2 21.7a4.2 4.2 0 0 1 5.9 0l6 6a4.2 4.2 0 0 1-5.9 5.9l-6-6a4.2 4.2 0 0 1 0-5.9Z" fill="#9df442" />
-      <path d="M79.5 35.2a4.2 4.2 0 0 1 5.9 0l4.5 4.6a4.2 4.2 0 1 1-5.9 5.9l-4.5-4.6a4.2 4.2 0 0 1 0-5.9Z" fill="#9df442" />
-    </svg>
+    <img
+      src="/answer-flow-logo.svg"
+      alt="Answer Flow AI"
+      className={className}
+      loading="eager"
+      decoding="async"
+    />
   )
 }
 
