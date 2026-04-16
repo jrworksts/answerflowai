@@ -83,7 +83,7 @@ function Header() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center">
-          <BrandLogo className="h-12 w-auto sm:h-14" />
+          <BrandLogo className="h-10 w-auto sm:h-12" />
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
@@ -107,17 +107,20 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-hero">
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.02)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_22%,rgba(157,244,66,0.2),transparent_20%),linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.02)_100%)]" />
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-20 pt-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28 lg:pt-16">
         <div className="relative z-10 animate-rise">
-          <div className="mb-6 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-sky backdrop-blur">
+          <div className="mb-6 inline-flex rounded-full border border-lime/30 bg-white/10 px-4 py-2 text-sm font-semibold text-lime backdrop-blur">
             24/7 AI Reception + Follow-Up For Residential HVAC
           </div>
-          <h1 className="max-w-3xl font-heading text-5xl font-bold uppercase leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-            Never Lose Another HVAC Job To Voicemail
+          <h1 className="max-w-4xl font-heading text-5xl font-bold uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+            Never Miss Another <span className="text-lime">HVAC Lead</span> Again
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
-            We install 24/7 AI reception &amp; follow-up systems for HVAC contractors.
+          <p className="mt-4 max-w-2xl font-heading text-2xl font-bold italic leading-tight text-white/95 sm:text-3xl">
+            24/7 AI answering service to book more jobs.
+          </p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
+            We install 24/7 AI reception &amp; follow-up systems for HVAC contractors so every caller gets an answer, gets qualified, and gets pushed toward a booked appointment.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a href="#book" className="rounded-full bg-orange px-7 py-4 text-center text-base font-bold text-white shadow-glow transition hover:bg-orange-deep">
@@ -138,17 +141,21 @@ function Hero() {
         </div>
         <div className="relative flex items-center justify-center">
           <div className="absolute inset-x-6 top-12 h-72 rounded-full bg-sky/20 blur-3xl sm:inset-x-12" />
-          <div className="absolute bottom-0 right-6 h-40 w-40 rounded-full bg-lime/20 blur-3xl" />
+          <div className="absolute bottom-0 right-6 h-40 w-40 rounded-full bg-lime/30 blur-3xl" />
+          <div className="absolute left-4 top-12 hidden opacity-20 md:block">
+            <img src="/answer-flow-logo.svg" alt="" className="h-28 w-auto" aria-hidden="true" />
+          </div>
           <div className="relative w-full max-w-xl animate-float rounded-[2rem] border border-white/10 bg-white/10 p-4 shadow-glow backdrop-blur-xl">
             <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#081a36]">
               <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative min-h-[340px] overflow-hidden bg-[radial-gradient(circle_at_top,rgba(255,138,30,0.18),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0))] p-6">
                   <div className="absolute -left-10 top-10 h-48 w-48 rounded-full bg-sky/20 blur-3xl" />
+                  <div className="absolute inset-x-6 bottom-24 h-px bg-gradient-to-r from-transparent via-lime/60 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-lime">
                       Live Call Flow
                     </p>
-                    <p className="mt-2 text-xl font-bold text-white">The phone rings. Nobody misses it.</p>
+                    <p className="mt-2 text-xl font-bold text-white">The phone rings. A real voice answers fast.</p>
                     <p className="mt-2 text-sm leading-6 text-slate-300">
                       Your AI answers, qualifies the lead, and locks in the appointment before your competitor picks up.
                     </p>
@@ -163,12 +170,13 @@ function Hero() {
                     <p className="mt-2 text-sm text-slate-300">After-hours and overflow calls are the leaks.</p>
                   </div>
                 </div>
-                <div className="relative flex min-h-[340px] items-end justify-center bg-[linear-gradient(180deg,rgba(93,184,255,0.06),rgba(255,255,255,0)),radial-gradient(circle_at_50%_20%,rgba(157,244,66,0.2),transparent_22%)] px-6 pb-6 pt-14">
+                <div className="relative flex min-h-[340px] items-end justify-center bg-[radial-gradient(circle_at_70%_20%,rgba(157,244,66,0.26),transparent_24%),linear-gradient(180deg,rgba(93,184,255,0.08),rgba(255,255,255,0)),linear-gradient(180deg,#0a1d3d_0%,#0d2a58_100%)] px-6 pb-6 pt-14">
                   <div className="absolute right-5 top-5 max-w-[240px] rounded-3xl rounded-tr-md bg-navy-soft px-4 py-3 text-sm leading-6 text-white shadow-panel">
                     Hi! Thanks for calling. How can I help with your HVAC needs today?
                   </div>
-                  <div className="absolute bottom-16 left-1/2 h-44 w-44 -translate-x-1/2 rounded-full border border-sky/30 bg-sky/10 blur-sm" />
-                  <RobotVisual />
+                  <div className="absolute bottom-10 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full border border-sky/30 bg-sky/10 blur-sm" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#081a36] to-transparent" />
+                  <HumanReceptionVisual />
                 </div>
               </div>
             </div>
@@ -336,7 +344,7 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
         <div>
           <div className="flex items-center">
-            <BrandLogo className="h-12 w-auto sm:h-14" />
+            <BrandLogo className="h-10 w-auto sm:h-12" />
           </div>
           <div className="mt-5 space-y-2 text-sm">
             <p>Phone: (757) 303-8050</p>
@@ -446,27 +454,42 @@ function BrandLogo({ className = '' }) {
   )
 }
 
-function RobotVisual() {
+function HumanReceptionVisual() {
   return (
     <svg viewBox="0 0 280 280" className="relative z-10 w-full max-w-[280px]" fill="none" aria-hidden="true">
-      <ellipse cx="140" cy="252" rx="72" ry="12" fill="rgba(255,255,255,0.12)" />
-      <circle cx="140" cy="72" r="54" fill="#f8fbff" />
-      <rect x="92" y="40" width="96" height="64" rx="28" fill="#101f3f" />
-      <circle cx="122" cy="72" r="9" fill="#5db8ff" />
-      <circle cx="158" cy="72" r="9" fill="#5db8ff" />
-      <path d="M122 93c6 6 30 6 36 0" stroke="#5db8ff" strokeWidth="6" strokeLinecap="round" />
-      <rect x="96" y="120" width="88" height="92" rx="34" fill="#f8fbff" />
-      <rect x="114" y="145" width="52" height="40" rx="16" fill="#101f3f" />
-      <path d="M122 165h36" stroke="#5db8ff" strokeWidth="4" strokeLinecap="round" />
-      <path d="M126 159l6 12 8-18 8 18 6-12" stroke="#5db8ff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M114 214l-20 26" stroke="#f8fbff" strokeWidth="14" strokeLinecap="round" />
-      <path d="M166 214l20 26" stroke="#f8fbff" strokeWidth="14" strokeLinecap="round" />
-      <path d="M100 136l-28 22" stroke="#f8fbff" strokeWidth="14" strokeLinecap="round" />
-      <path d="M180 136l28 22" stroke="#f8fbff" strokeWidth="14" strokeLinecap="round" />
-      <circle cx="218" cy="82" r="8" fill="#9df442" className="animate-pulse-soft" />
-      <path d="M228 74c7 5 12 13 14 21" stroke="#5db8ff" strokeWidth="5" strokeLinecap="round" />
-      <path d="M236 60c12 8 20 20 24 34" stroke="#5db8ff" strokeWidth="5" strokeLinecap="round" opacity=".75" />
-      <path d="M241 45c16 10 26 26 31 44" stroke="#5db8ff" strokeWidth="5" strokeLinecap="round" opacity=".5" />
+      <ellipse cx="142" cy="254" rx="78" ry="14" fill="rgba(255,255,255,0.12)" />
+      <path d="M82 252c8-52 40-86 78-86s70 34 78 86H82Z" fill="#0f2448" />
+      <path d="M103 252c6-37 25-62 57-62 31 0 50 25 56 62H103Z" fill="#12366f" />
+      <path d="M111 77c0-32 22-56 52-56 31 0 52 24 52 56 0 35-24 66-52 66s-52-31-52-66Z" fill="#ffd8bf" />
+      <path d="M115 86c5-39 28-63 57-63 27 0 45 15 51 44-10-8-19-12-34-10-20 3-34-4-45-14-6 20-15 34-29 43Z" fill="#1f2437" />
+      <path d="M120 92c0-8 7-15 15-15" stroke="#1f2437" strokeWidth="5" strokeLinecap="round" />
+      <path d="M187 92c0-8-7-15-15-15" stroke="#1f2437" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="142" cy="92" r="4" fill="#1f2437" />
+      <circle cx="181" cy="92" r="4" fill="#1f2437" />
+      <path d="M153 109c4 4 13 4 17 0" stroke="#d67f66" strokeWidth="4" strokeLinecap="round" />
+      <path d="M142 120c8 8 29 8 37 0" stroke="#c96d5a" strokeWidth="5" strokeLinecap="round" />
+      <path d="M98 80c0-18 14-32 32-32h11" stroke="#101f3f" strokeWidth="9" strokeLinecap="round" />
+      <path d="M215 80c0-18-14-32-32-32h-11" stroke="#101f3f" strokeWidth="9" strokeLinecap="round" />
+      <rect x="88" y="74" width="15" height="28" rx="7.5" fill="#101f3f" />
+      <rect x="211" y="74" width="15" height="28" rx="7.5" fill="#101f3f" />
+      <path d="M221 112c0 15-11 28-26 30" stroke="#101f3f" strokeWidth="6" strokeLinecap="round" />
+      <rect x="185" y="139" width="30" height="16" rx="8" fill="#101f3f" />
+      <path d="M146 145c6 11 13 16 23 16h20" stroke="#101f3f" strokeWidth="6" strokeLinecap="round" />
+      <path d="M149 136h26c0 13-5 24-13 24s-13-11-13-24Z" fill="#ffc4a3" />
+      <path d="M123 160h79l18 92H106l17-92Z" fill="#f3f7ff" />
+      <path d="M139 161h48l14 91h-79l17-91Z" fill="#eef4ff" />
+      <path d="M111 175c16 19 37 28 62 28 23 0 44-8 59-25" stroke="#5db8ff" strokeWidth="4" strokeLinecap="round" opacity=".65" />
+      <rect x="137" y="185" width="51" height="38" rx="14" fill="#101f3f" />
+      <path d="M146 204h32" stroke="#5db8ff" strokeWidth="4" strokeLinecap="round" />
+      <path d="M151 198l4 12 8-18 8 18 4-12" stroke="#5db8ff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M122 158l-18 26" stroke="#f3f7ff" strokeWidth="12" strokeLinecap="round" />
+      <path d="M202 158l22 28" stroke="#f3f7ff" strokeWidth="12" strokeLinecap="round" />
+      <path d="M128 252l-14 16" stroke="#12366f" strokeWidth="12" strokeLinecap="round" />
+      <path d="M192 252l14 16" stroke="#12366f" strokeWidth="12" strokeLinecap="round" />
+      <circle cx="235" cy="84" r="8" fill="#9df442" className="animate-pulse-soft" />
+      <path d="M245 76c7 5 12 13 14 21" stroke="#5db8ff" strokeWidth="5" strokeLinecap="round" />
+      <path d="M253 62c12 8 20 20 24 34" stroke="#5db8ff" strokeWidth="5" strokeLinecap="round" opacity=".75" />
+      <path d="M258 47c16 10 26 26 31 44" stroke="#5db8ff" strokeWidth="5" strokeLinecap="round" opacity=".5" />
     </svg>
   )
 }
