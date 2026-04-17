@@ -54,6 +54,9 @@ const navItems = [
   { label: 'How It Works', href: '#how-it-works' },
 ]
 
+const bookingUrl =
+  'https://api.leadconnectorhq.com/widget/bookings/ai-voice-setup-call-30daysfree'
+
 function App() {
   return (
     <div className="bg-[#eef3fb] font-body text-slate-900">
@@ -90,7 +93,9 @@ function Header() {
           ))}
         </nav>
         <a
-          href="#book"
+          href={bookingUrl}
+          target="_blank"
+          rel="noreferrer"
           className="hidden rounded-full bg-gradient-to-b from-lime to-[#57c63b] px-5 py-3 text-sm font-extrabold text-navy shadow-glow transition hover:brightness-105 md:inline-flex"
         >
           Book My Free Audit
@@ -122,7 +127,9 @@ function Hero() {
 
           <div className="mt-8 flex max-w-sm flex-col gap-4">
             <a
-              href="#book"
+              href={bookingUrl}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full bg-gradient-to-b from-lime to-[#49bb40] px-7 py-4 text-center text-xl font-extrabold text-white shadow-glow transition hover:brightness-105"
             >
               Book a 15-Minute Demo
@@ -234,7 +241,9 @@ function FinalCtaSection() {
           Book a free 15 minute audit and we&apos;ll show you exactly where revenue is slipping through the cracks.
         </p>
         <a
-          href="mailto:hello@answerflowai.com?subject=Book%20My%20Free%20Audit"
+          href={bookingUrl}
+          target="_blank"
+          rel="noreferrer"
           className="mt-10 inline-flex rounded-full bg-gradient-to-r from-orange to-orange-deep px-10 py-5 text-2xl font-extrabold text-white shadow-glow transition hover:brightness-105"
         >
           Book My Free Audit
@@ -271,7 +280,9 @@ function MobileStickyCta() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-navy/95 p-3 shadow-[0_-10px_40px_rgba(0,0,0,0.2)] backdrop-blur md:hidden">
       <a
-        href="#book"
+        href={bookingUrl}
+        target="_blank"
+        rel="noreferrer"
         className="flex items-center justify-center rounded-full bg-gradient-to-r from-orange to-orange-deep px-5 py-4 text-center text-sm font-extrabold text-white"
       >
         Book My Free Audit
