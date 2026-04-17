@@ -145,7 +145,7 @@ function Hero() {
 
         <div className="relative min-h-[520px] lg:min-h-[620px]">
           <div className="absolute left-0 top-1/2 z-20 hidden w-[220px] -translate-y-1/2 rounded-[1.75rem] border border-white/15 bg-navy/50 p-3 shadow-glow backdrop-blur md:block lg:left-4">
-            <MetricCard icon={ClockIcon} value="< 10" suffix="SEC" label="Avg Response Time" />
+            <MetricCard icon={ClockIcon} value="2" suffix="Sec" label="Avg Response Time" />
             <MetricCard icon={ClockIcon} value="24/7" label="Always Answering" bordered />
             <MetricCard icon={BriefcaseIcon} value="1 Job" label="Weekly Pays For The System" bordered />
           </div>
