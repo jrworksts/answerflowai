@@ -260,8 +260,8 @@ function Footer() {
         <div>
           <BrandLogo className="h-9 w-auto sm:h-10" />
           <div className="mt-6 space-y-2 text-sm text-white/85">
-            <p>Phone (303) 831-6000</p>
-            <p>Email hello@answerflowai.com</p>
+            <p>Phone 361-266-4276</p>
+            <p>Email hello@theanswerflow.com</p>
           </div>
         </div>
         <div className="flex flex-wrap gap-6 text-sm font-bold">
